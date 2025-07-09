@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invierte con Nosotros - Intercapital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-sky-50 text-gray-800">
+
+    <header class="bg-blue-900 text-white py-6">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Intercapital</h1>
+            <a href="index.html" class="hover:underline text-sm">Volver al inicio</a>
+        </div>
+    </header>
+
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-4 text-blue-900">
+                Invierte con Nosotros
+            </h2>
+            <p class="text-xl text-center mb-12 text-gray-600 max-w-3xl mx-auto">
+                Forma parte de un modelo de negocio sólido y rentable. Ofrecemos oportunidades de inversión respaldadas
+                por garantías hipotecarias.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div
+                    class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1">
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">Alta Rentabilidad</h3>
+                    <p class="text-gray-600">
+                        Genera retornos atractivos desde el primer mes. Tus fondos trabajan mientras tú descansas.
+                    </p>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1">
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">Inversión Segura</h3>
+                    <p class="text-gray-600">
+                        Tus inversiones están respaldadas por bienes inmuebles con garantías reales.
+                    </p>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1">
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">Transparencia Total</h3>
+                    <p class="text-gray-600">
+                        Acceso a reportes periódicos, contratos claros y acompañamiento legal durante todo el proceso.
+                    </p>
+                </div>
+
+                <div
+                    class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1">
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">Mínimo Riesgo</h3>
+                    <p class="text-gray-600">
+                        Evaluamos cuidadosamente cada proyecto para garantizar solidez y confiabilidad.
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="index.html#contacto"
+                    class="inline-block bg-yellow-400 text-blue-900 px-6 py-3 font-bold rounded-full hover:bg-yellow-300 transition">
+                    Quiero Invertir
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <form action="https://formsubmit.co/TU_CORREO_AQUI" method="POST"
+        class="bg-white mt-16 p-8 rounded-xl shadow-md max-w-2xl mx-auto">
+        <h3 class="text-2xl font-bold text-blue-900 mb-6 text-center">Deja tus datos y te contactamos</h3>
+
+        <div class="mb-4">
+            <label class="block text-gray-700 font-semibold mb-2" for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" required
+                class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        </div>
+
+        <div class="mb-4">
+            <label class="block text-gray-700 font-semibold mb-2" for="celular">Celular o WhatsApp</label>
+            <input type="tel" id="celular" name="celular" required
+                class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        </div>
+
+        <div class="mb-4">
+            <label class="block text-gray-700 font-semibold mb-2" for="monto">¿Cuánto deseas invertir?</label>
+            <input type="text" id="monto" name="monto" required
+                class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+        </div>
+
+        <div class="mb-6">
+            <label class="block text-gray-700 font-semibold mb-2" for="opcion">¿En qué deseas invertir?</label>
+            <select id="opcion" name="opcion" required
+                class="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="invertir">Invertir</option>
+                <option value="hipotecario">Hipotecario</option>
+                <option value="vivienda">Vivienda</option>
+                <option value="vehicular">Vehicular</option>
+            </select>
+        </div>
+
+        <!-- Campo oculto para redirección si usas FormSubmit -->
+        <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
+
+        <button type="submit"
+            class="w-full bg-yellow-400 text-blue-900 font-bold py-3 rounded-full hover:bg-yellow-300 transition">
+            Enviar solicitud
+        </button>
+    </form>
+
+
+    <footer class="bg-blue-900 text-white text-center py-4">
+        © 2025 Intercapital. Todos los derechos reservados.
+    </footer>
+
+</body>
+
+</html>
