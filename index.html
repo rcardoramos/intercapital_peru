@@ -42,7 +42,7 @@
 
 <body class="font-sans bg-gray-50">
   <!-- Header -->
-  <header class="gradient-bg text-white">
+  <header id="header" class="gradient-bg text-white">
     <div class="container mx-auto px-4 py-6">
       <div class="flex justify-between items-center">
         <div class="flex items-center">
@@ -110,9 +110,9 @@
       <p class="text-xl text-center mb-12 text-gray-600 max-w-3xl mx-auto">Diseñamos soluciones hipotecarias
         adaptadas a tus necesidades financieras.</p>
 
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-blue-50 p-8 rounded-xl">
-          <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+      <div class="grid md:grid-cols-2 gap-8 ">
+        <div class="bg-blue-50 p-8 rounded-xl hover:shadow-lg transition transform hover:-translate-y-1">
+          <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 ">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24"
               stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -124,7 +124,7 @@
             mercado. (Sujeto a evaluación previa)</p>
         </div>
 
-        <div class="bg-blue-50 p-8 rounded-xl">
+        <div class="bg-blue-50 p-8 rounded-xl hover:shadow-lg transition transform hover:-translate-y-1">
           <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24"
               stroke="currentColor">
@@ -137,7 +137,7 @@
             después de la aprobación del crédito.</p>
         </div>
 
-        <div class="bg-blue-50 p-8 rounded-xl">
+        <div class="bg-blue-50 p-8 rounded-xl hover:shadow-lg transition transform hover:-translate-y-1">
           <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24"
               stroke="currentColor">
@@ -150,7 +150,7 @@
             desembolso rápido.</p>
         </div>
 
-        <div class="bg-blue-50 p-8 rounded-xl">
+        <div class="bg-blue-50 p-8 rounded-xl hover:shadow-lg transition transform hover:-translate-y-1">
           <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-8">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24"
               stroke="currentColor">
@@ -166,7 +166,7 @@
     </div>
   </section>
 
-  <!-- Process Section -->
+  <!-- SECTION "CÓMO FUNCIONA" -->
   <section id="como-funciona" class="py-16 bg-gray-50">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold text-center mb-4 text-blue-900">Cómo Funciona</h2>
@@ -244,7 +244,17 @@
         <p class="text-xl mb-8 text-gray-600">Completa tus datos y te contactaremos en minutos para evaluar tu
           crédito.</p>
 
-        <form id="contact-form" class="grid md:grid-cols-2 gap-6">
+        <form id="contact-form" action="https://formspree.io/f/movwgabr" method="POST"
+          class="grid md:grid-cols-2 gap-6">
+
+          <!-- Seguridad y redirección -->
+
+          <input type="hidden" name="_subject" value="Nuevo mensaje desde el formulario ICP">
+          <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
+          <input type="text" name="_gotcha" style="display:none">
+
+          <!-- Seguridad y redirección -->
+
           <div>
             <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre Completo*</label>
             <input type="text" id="nombre" name="nombre" required
@@ -283,9 +293,10 @@
           </div>
 
           <div class="md:col-span-2">
-            <button type="submit"
-              class="w-full bg-blue-600 text-white px-6 py-4 text-lg font-bold rounded-lg hover:bg-blue-700 transition pulse-animation">Registrarme
-              Ahora</button>
+            <button type="submit" id="submit-btn"
+              class="w-full bg-blue-600 text-white px-6 py-4 text-lg font-bold rounded-lg hover:bg-blue-700">
+              Registrarme Ahora
+            </button>
           </div>
         </form>
       </div>
@@ -386,12 +397,8 @@
       <div class="grid md:grid-cols-4 gap-8">
         <div>
           <div class="flex items-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-2" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-            </svg>
-            <span class="text-xl font-bold">Intercapital Perú</span>
+            <img src="./img/Logo ICP Blanco.png" alt="Logo Intercapital" class="h-12 mr-3">
+            <!-- <span class="text-xl font-bold">Intercapital Perú</span> -->
           </div>
           <p class="text-blue-200">Soluciones hipotecarias confiables para hacer realidad tus proyectos
             financieros.</p>
@@ -400,7 +407,7 @@
         <div>
           <h3 class="text-lg font-bold mb-4">Enlaces</h3>
           <ul class="space-y-2">
-            <li><a href="#" class="text-blue-200 hover:text-white">Inicio</a></li>
+            <li><a href="" class="text-blue-200 hover:text-white">Inicio</a></li>
             <li><a href="#beneficios" class="text-blue-200 hover:text-white">Beneficios</a></li>
             <li><a href="#como-funciona" class="text-blue-200 hover:text-white">Cómo Funciona</a></li>
             <li><a href="#contacto" class="text-blue-200 hover:text-white">Contáctanos</a></li>
@@ -473,58 +480,7 @@
     </div>
   </div>
 
-  <script>
-    // Form submission
-    document.getElementById('contact-form').addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      // Simulate form submission (in a real scenario, you would send to server)
-      setTimeout(function () {
-        document.getElementById('success-modal').classList.remove('hidden');
-      }, 1000);
-    });
-
-    // Close modal
-    document.getElementById('close-modal').addEventListener('click', function () {
-      document.getElementById('success-modal').classList.add('hidden');
-    });
-
-    // FAQ accordion functionality
-    document.querySelectorAll('[aria-expanded]').forEach(button => {
-      button.addEventListener('click', () => {
-        const isExpanded = button.classList.contains('group-aria-expanded') ||
-          button.getAttribute('aria-expanded') === 'true';
-        const content = button.nextElementSibling;
-
-        if (isExpanded) {
-          button.classList.remove('group-aria-expanded');
-          button.setAttribute('aria-expanded', 'false');
-          content.classList.add('hidden');
-        } else {
-          button.classList.add('group-aria-expanded');
-          button.setAttribute('aria-expanded', 'true');
-          content.classList.remove('hidden');
-        }
-      });
-    });
-
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          targetElement.scrollIntoView({
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-  </script>
+  <script src="./js/index.js"></script>
 </body>
 
 </html>
