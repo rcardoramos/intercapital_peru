@@ -9,6 +9,7 @@
     content="Obtén el préstamo hipotecario que necesitas con las mejores condiciones y tasas del mercado. Avalamos tu propiedad en 72 horas.">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="shortcut icon" href="./img/LOGO-ICP_32x32_fondo azul.png" type="image/png">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com"> -->
   <style>
@@ -71,7 +72,8 @@
     </div>
   </header>
 
-  <!-- SECCIÓN HERO - Prestramos -  -->
+  <!-- SECCIÓN HERO - Video introducción -  -->
+
   <section class="gradient-bg text-white py-16 md:py-24">
     <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
       <div class="md:w-1/2 mb-10 md:mb-0">
@@ -93,7 +95,7 @@
       </div>
       <div class="md:w-1/2 w-full max-w-md mx-auto">
         <video controls class="w-full rounded-xl shadow-md">
-          <source src="./img/VIDEO_DEA_ICP_WEB.mp4" type="video/mp4">
+          <source src="./videos/VIDEO_DEA_ICP_WEB FINAL.mp4" type="video/mp4">
           Tu navegador no soporta videos HTML5.
         </video>
       </div>
@@ -102,6 +104,111 @@
       </div> -->
     </div>
   </section>
+
+  <!-- SECCIÓN DE TESTIMONIOS -->
+
+  <section id="testimonios" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-4 text-blue-900">Testimonios Reales</h2>
+      <p class="text-xl text-center mb-12 text-gray-600 max-w-3xl mx-auto">
+        Escucha y lee lo que nuestros clientes dicen sobre su experiencia con nosotros.
+      </p>
+
+      <!-- Testimonios en video -->
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1">
+          <div class="aspect-w-16 aspect-h-9">
+            <video controls class="w-full h-64 object-cover rounded-xl">
+              <source src="./videos/Testimonio1_Flavio.mp4" type="video/mp4">
+              Tu navegador no soporta el video.
+            </video>
+          </div>
+          <p class="mt-4 text-center text-blue-900 font-semibold">Flavio</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1">
+          <div class="aspect-w-16 aspect-h-9">
+            <video controls class="w-full h-64 object-cover rounded-xl">
+              <source src="./videos/Testimonio2_Cecilia.mp4" type="video/mp4">
+              Tu navegador no soporta el video.
+            </video>
+          </div>
+          <p class="mt-4 text-center text-blue-900 font-semibold">Cecilia</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1">
+          <div class="aspect-w-16 aspect-h-9">
+            <video controls class="w-full h-64 object-cover rounded-xl">
+              <source src="./videos/Testimonio3_Maribel.mp4" type="video/mp4">
+              Tu navegador no soporta el video.
+            </video>
+          </div>
+          <p class="mt-4 text-center text-blue-900 font-semibold">Maribel</p>
+        </div>
+      </div>
+
+      <!-- Testimonios escritos -->
+
+      <!-- <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-blue-50 p-6 rounded-xl hover:shadow-lg transition transform hover:-translate-y-1">
+          <p class="text-gray-700 italic mb-4">"Me aprobaron el crédito en menos de 48 horas, el proceso fue claro y muy
+            profesional."</p>
+          <p class="text-blue-900 font-bold">– Karina S.</p>
+        </div>
+
+        <div class="bg-blue-50 p-6 rounded-xl hover:shadow-lg transition transform hover:-translate-y-1">
+          <p class="text-gray-700 italic mb-4">"Pensé que estar en Infocorp me cerraría las puertas, pero aquí me dieron
+            una gran oportunidad."</p>
+          <p class="text-blue-900 font-bold">– José T.</p>
+        </div>
+
+        <div class="bg-blue-50 p-6 rounded-xl hover:shadow-lg transition transform hover:-translate-y-1">
+          <p class="text-gray-700 italic mb-4">"Excelente atención y tasas muy accesibles. Lo recomiendo totalmente."
+          </p>
+          <p class="text-blue-900 font-bold">– Milagros F.</p>
+        </div>
+      </div> -->
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE CLIENTES CARRUSEL -->
+
+  <section id="clientes" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-4 text-blue-900">Nuestros Clientes</h2>
+      <p class="text-xl text-center mb-12 text-gray-600 max-w-3xl mx-auto">
+        Más de 1,600 emprendedores ya confiaron en nosotros y obtuvieron resultados con garantía. Aquí te presentamos a
+        algunos de nuestros clientes satisfechos:
+      </p>
+
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./img/Cliente1_junio.png" alt="Cliente 1 feliz"
+              class="rounded-xl shadow w-full h-64 object-contain mx-auto" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/Cliente2_junio.png" alt="Cliente 2 feliz"
+              class="rounded-xl shadow w-full h-64 object-covers" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/cliente3_junio.png" alt="Cliente 3 feliz"
+              class="rounded-xl shadow w-full h-64 object-cover" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/cliente4_junio.png" alt="Cliente 3 feliz"
+              class="rounded-xl shadow w-full h-64 object-cover" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/cliente5_junio.png" alt="Cliente 3 feliz"
+              class="rounded-xl shadow w-full h-64 object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <!-- SECCIÓN DE BENEFICIOS -->
   <section id="beneficios" class="py-16 bg-white">
@@ -244,7 +351,7 @@
         <p class="text-xl mb-8 text-gray-600">Completa tus datos y te contactaremos en minutos para evaluar tu
           crédito.</p>
 
-        <form id="contact-form" action="https://formspree.io/f/movwgabr" method="POST"
+        <form id="contact-form" action="https://formsubmit.co/velopercode@gmail.com" method="POST" id="contact-form"
           class="grid md:grid-cols-2 gap-6">
 
           <!-- Seguridad y redirección -->
@@ -283,13 +390,11 @@
             </select>
           </div>
 
-          <div class="md:col-span-2">
-            <div class="flex items-center">
-              <input id="privacidad" name="privacidad" type="checkbox" required
-                class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
-              <label for="privacidad" class="ml-2 block text-sm text-gray-700">Acepto la <a href="#"
-                  class="text-blue-600 hover:text-blue-800">Política de Privacidad</a>*</label>
-            </div>
+          <div class="flex items-start">
+            <input type="checkbox" id="privacidad" name="privacidad" required class="mt-1 h-4 w-4 text-blue-600">
+            <label for="privacidad" class="ml-2 text-sm text-gray-700">
+              Acepto la <a href="#" class="text-blue-600 hover:underline">Política de Privacidad</a>*
+            </label>
           </div>
 
           <div class="md:col-span-2">
@@ -392,7 +497,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-blue-900 text-white py-12">
+  <footer class="bg-blue-700 text-white py-12">
     <div class="container mx-auto px-4">
       <div class="grid md:grid-cols-4 gap-8">
         <div>
@@ -480,8 +585,12 @@
     </div>
   </div>
 
-  <script src="./js/index.js"></script>
 </body>
+
+<!-- SwiperJS CDN -->
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="./js/index.js"></script>
 
 </html>
 

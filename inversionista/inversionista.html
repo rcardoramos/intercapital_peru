@@ -13,17 +13,130 @@
     <header class="bg-blue-900 text-white py-6">
         <div class="container mx-auto px-4 flex justify-between items-center">
             <h1 class="text-2xl font-bold">Intercapital</h1>
-            <a href="index.html" class="hover:underline text-sm">Volver al inicio</a>
+            <a href="../index.html" class="hover:underline text-sm">Volver al inicio</a>
         </div>
     </header>
 
-    <section class="py-16">
+    <!-- Hero section - video -->
+
+    <section class="bg-white py-20">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 items-center gap-12">
+
+            <!-- Frase impactante -->
+            <div>
+                <h1 class="text-4xl md:text-5xl font-bold text-blue-900 leading-tight mb-6">
+                    Invierte seguro, <br class="hidden md:block" /> crece sin límites.
+                </h1>
+                <p class="text-lg text-gray-600 mb-8">
+                    Únete a nuestra comunidad de inversionistas y descubre cómo transformar tus ahorros en patrimonio.
+                </p>
+                <a href="#contacto"
+                    class="inline-block bg-yellow-400 text-blue-900 px-6 py-3 font-bold rounded-full hover:bg-yellow-300 transition">
+                    Comienza a invertir hoy
+                </a>
+            </div>
+
+            <!-- Video local -->
+            <div class="rounded-xl overflow-hidden shadow-lg">
+                <video autoplay muted loop playsinline controls class="w-full h-64 md:h-auto object-cover rounded-xl">
+                    <source src="./videos/hero-video.mp4" type="video/mp4" />
+                    Tu navegador no soporta el video.
+                </video>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- PORQUE INVERTIR CON NOSOTROS -->
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-4 text-blue-900">¿Por qué invertir con nosotros?</h2>
+            <p class="text-xl text-center mb-12 text-gray-600 max-w-3xl mx-auto">
+                En Intercapital ofrecemos oportunidades de inversión únicas, respaldadas por garantías reales y un
+                equipo
+                legal especializado.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1">
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">Seguridad</h3>
+                    <p class="text-gray-600">Tus inversiones están protegidas por garantías hipotecarias sólidas.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1">
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">Rentabilidad</h3>
+                    <p class="text-gray-600">Genera ingresos mensuales desde el primer mes.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1">
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">Transparencia</h3>
+                    <p class="text-gray-600">Acceso a reportes periódicos y contratos claros.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonios" class="py-16 bg-blue-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-4 text-blue-900">Testimonios Reales</h2>
+            <p class="text-xl text-center mb-12 text-gray-600 max-w-3xl mx-auto">
+                Escucha y lee lo que nuestros inversionistas dicen sobre nosotros.
+            </p>
+
+            <!-- Videos -->
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <video controls class="w-full h-64 object-cover rounded-xl">
+                        <source src="./videos/testimonio1.mp4" type="video/mp4" />
+                        Tu navegador no soporta el video.
+                    </video>
+                </div>
+
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <video controls class="w-full h-64 object-cover rounded-xl">
+                        <source src="./videos/testimonio2.mp4" type="video/mp4" />
+                        Tu navegador no soporta el video.
+                    </video>
+                </div>
+
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <video controls class="w-full h-64 object-cover rounded-xl">
+                        <source src="./videos/testimonio3.mp4" type="video/mp4" />
+                        Tu navegador no soporta el video.
+                    </video>
+                </div>
+            </div>
+
+            <!-- Testimonios escritos -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow">
+                    <p class="text-gray-700 italic">"Invertí con Intercapital y ahora genero ingresos mensuales sin
+                        complicaciones."</p>
+                    <p class="mt-4 font-bold text-blue-900">— Carla M., Lima</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow">
+                    <p class="text-gray-700 italic">"Su equipo me brindó confianza y toda la información legal
+                        necesaria. Muy recomendados."</p>
+                    <p class="mt-4 font-bold text-blue-900">— Andrés V., Arequipa</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow">
+                    <p class="text-gray-700 italic">"No sabía dónde invertir mi fondo de retiro, y fue la mejor
+                        decisión
+                        hacerlo aquí."</p>
+                    <p class="mt-4 font-bold text-blue-900">— Rosa E., Cusco</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="py-16">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-4 text-blue-900">
                 Invierte con Nosotros
             </h2>
             <p class="text-xl text-center mb-12 text-gray-600 max-w-3xl mx-auto">
-                Forma parte de un modelo de negocio sólido y rentable. Ofrecemos oportunidades de inversión respaldadas
+                Forma parte de un modelo de negocio sólido y rentable. Ofrecemos oportunidades de inversión
+                respaldadas
                 por garantías hipotecarias.
             </p>
 
@@ -48,7 +161,8 @@
                     class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1">
                     <h3 class="text-xl font-bold mb-3 text-blue-900">Transparencia Total</h3>
                     <p class="text-gray-600">
-                        Acceso a reportes periódicos, contratos claros y acompañamiento legal durante todo el proceso.
+                        Acceso a reportes periódicos, contratos claros y acompañamiento legal durante todo el
+                        proceso.
                     </p>
                 </div>
 
@@ -68,11 +182,20 @@
                 </a>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <form action="https://formsubmit.co/TU_CORREO_AQUI" method="POST"
-        class="bg-white mt-16 p-8 rounded-xl shadow-md max-w-2xl mx-auto">
+    <!-- Formulario  -->
+
+    <form action="https://formsubmit.co/velopercode@gmail.com" method="POST"
+        class="bg-white mt-16 mb-24 p-8 rounded-xl shadow-md max-w-2xl mx-auto">
         <h3 class="text-2xl font-bold text-blue-900 mb-6 text-center">Deja tus datos y te contactamos</h3>
+
+        <!-- seguridad -->
+
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
+        <input type="text" name="_honey" style="display:none">
+
 
         <div class="mb-4">
             <label class="block text-gray-700 font-semibold mb-2" for="nombre">Nombre completo</label>
@@ -104,20 +227,85 @@
             </select>
         </div>
 
-        <!-- Campo oculto para redirección si usas FormSubmit -->
-        <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
-
         <button type="submit"
             class="w-full bg-yellow-400 text-blue-900 font-bold py-3 rounded-full hover:bg-yellow-300 transition">
             Enviar solicitud
         </button>
     </form>
 
+    <!-- footer  -->
 
-    <footer class="bg-blue-900 text-white text-center py-4 mt-16">
-        © 2025 Intercapital. Todos los derechos reservados.
+    <footer class="bg-blue-700 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="./img/Logo ICP Blanco.png" alt="Logo Intercapital" class="h-12 mr-3">
+                        <!-- <span class="text-xl font-bold">Intercapital Perú</span> -->
+                    </div>
+                    <p class="text-blue-200">Soluciones hipotecarias confiables para hacer realidad tus proyectos
+                        financieros.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Enlaces</h3>
+                    <ul class="space-y-2">
+                        <li><a href="" class="text-blue-200 hover:text-white">Inicio</a></li>
+                        <li><a href="#beneficios" class="text-blue-200 hover:text-white">Beneficios</a></li>
+                        <li><a href="#como-funciona" class="text-blue-200 hover:text-white">Cómo Funciona</a></li>
+                        <li><a href="#contacto" class="text-blue-200 hover:text-white">Contáctanos</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-blue-200 hover:text-white">Aviso de Privacidad</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white">Términos y Condiciones</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white">Contratos</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contáctanos</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <span>800 123 4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <span>info@finanzhipotecario.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span>Av. Principal 123, Ciudad de México</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-blue-800 mt-8 pt-8 text-center text-blue-200">
+                <p>© 2025 Intercapital Perú. Todos los derechos reservados.</p>
+            </div>
+        </div>
     </footer>
 
 </body>
+<script src="../js/index.js"></script>
 
 </html>
