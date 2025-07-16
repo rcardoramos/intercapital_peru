@@ -1,3 +1,7 @@
- .background {
-     background: #183662
- }
+html {
+    scroll-behavior: smooth;
+}
+
+.background {
+    background: #183662
+}
