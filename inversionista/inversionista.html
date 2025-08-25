@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html style="scroll-behavior: smooth;" lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inversionistas - Intercapital Perú</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="../img/LOGO-ICP_32x32_fondo azul.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #183662;
+            color: #fff
+        }
+
+        .form-input {
+            transition: all .2s ease;
+            color: #183662;
+            background: #fff;
+            caret-color: #183662
+        }
+
+        .form-input::placeholder {
+            color: #9ca3af
+        }
+
+        .countdown-item {
+            min-width: 80px
+        }
+
+        @media (max-width:768px) {
+            .countdown-item {
+                min-width: 60px
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-[#183662]">
+
+    <!-- LOGO CENTRADO (link opcional al sitio) -->
+    <a href="../index.html" target="_blank" rel="noopener">
+        <div class="w-full flex justify-center py-8 bg-[#183662]">
+            <img src="../img/ICP-EMPRESA-PNG.png" alt="Intercapital Perú" class="h-12 md:h-20">
+        </div>
+    </a>
+
+    <!-- HERO -->
+    <section id="inicio" class="min-h-[90vh] bg-[#183662] flex items-center justify-center py-16 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                Invierte seguro,
+                <br>
+                crece<span class="text-sky-300"> sin límites.</span>
+            </h1>
+            <p class="text-white/80 lg:text-xl max-w-3xl mx-auto mb-10">
+                Únete a nuestra comunidad de inversionistas y descubre cómo transformar tus ahorros en patrimonio.
+            </p>
+
+            <!-- Video debajo del H1 -->
+            <div class="relative rounded-xl overflow-hidden shadow-lg mb-10 max-w-3xl mx-auto border border-white/10">
+                <video autoplay loop playsinline class="w-full h-full object-cover">
+                    <source src="../inversionista/video/icp-landing.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+            </div>
+
+            <!-- CONTADOR -->
+            <div class="mt-7">
+                <a href="#formulario"
+                    class="inline-block bg-white text-[#183662] font-semibold rounded-lg px-8 py-3 shadow-md hover:shadow-lg hover:bg-white/90 transition">
+                    ¡Quiero invertir!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- POR QUÉ INVERTIR -->
+    <section class="py-16 px-4 bg-[#183662]">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">¿Por qué invertir con nosotros?</h2>
+            <p class="text-white/80 max-w-3xl mx-auto mb-12">
+                En Intercapital ofrecemos oportunidades de inversión únicas, respaldadas por garantías reales y un
+                equipo legal especializado.
+            </p>
+
+            <div class="grid gap-8 md:grid-cols-3">
+                <!-- Seguridad -->
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6 shadow-lg hover:shadow-xl transition">
+                    <div class="text-4xl mb-4">🔒</div>
+                    <h3 class="text-xl font-semibold mb-2">Seguridad</h3>
+                    <p class="text-white/70 text-sm">
+                        Tus inversiones están protegidas por garantías hipotecarias sólidas.
+                    </p>
+                </div>
+
+                <!-- Rentabilidad -->
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6 shadow-lg hover:shadow-xl transition">
+                    <div class="text-4xl mb-4">📈</div>
+                    <h3 class="text-xl font-semibold mb-2">Rentabilidad</h3>
+                    <p class="text-white/70 text-sm">
+                        Genera ingresos mensuales desde el primer mes.
+                    </p>
+                </div>
+
+                <!-- Transparencia -->
+                <div class="bg-white/5 border border-white/10 rounded-xl p-6 shadow-lg hover:shadow-xl transition">
+                    <div class="text-4xl mb-4">📜</div>
+                    <h3 class="text-xl font-semibold mb-2">Transparencia</h3>
+                    <p class="text-white/70 text-sm">
+                        Acceso a reportes periódicos y contratos claros.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO -->
+    <section id="formulario" class="py-16 px-4 bg-[#183662]">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-10">
+                <h2 class="text-4xl font-bold mb-4">Reserva tu asistencia</h2>
+                <p class="text-white/80 max-w-2xl mx-auto">Cupos limitados. Déjanos tus datos y te confirmamos
+                    por correo.</p>
+            </div>
+
+            <!-- Getform -->
+            <form id="registroForm" action="https://getform.io/f/awnynnqb" method="POST"
+                class="bg-white rounded-xl p-8 shadow-md text-left">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label for="name" class="block text-[#183662] font-medium mb-2">Nombre Completo</label>
+                        <input id="name" name="name" type="text" required
+                            class="form-input w-full px-4 py-3 rounded-lg border border-gray-300"
+                            placeholder="Ej. Juan Pérez">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-[#183662] font-medium mb-2">Correo
+                            Electrónico</label>
+                        <input id="email" name="email" type="email" required
+                            class="form-input w-full px-4 py-3 rounded-lg border border-gray-300"
+                            placeholder="correo@dominio.com">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-[#183662] font-medium mb-2">Número de
+                            Celular</label>
+                        <input id="phone" name="phone" type="tel" required
+                            class="form-input w-full px-4 py-3 rounded-lg border border-gray-300"
+                            placeholder="+51 900 000 000">
+                    </div>
+                    <div>
+                        <label for="inversion_tipo" class="block text-[#183662] font-medium mb-2">¿En qué deseas
+                            invertir?</label>
+                        <select id="inversion_tipo" name="inversion_tipo" required
+                            class="form-input w-full px-4 py-3 rounded-lg border border-gray-300">
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="Vehicular">Vehicular</option>
+                            <option value="Hipotecario">Hipotecario</option>
+                            <option value="Inversión">Inversión</option>
+                        </select>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label for="monto_invertir" class="block text-[#183662] font-medium mb-2">¿Cuánto deseas
+                            invertir?</label>
+                        <select id="monto_invertir" name="monto_invertir" required
+                            class="form-input w-full px-4 py-3 rounded-lg border border-gray-300">
+                            <option value="" disabled selected>Selecciona un monto</option>
+                            <option value="20000">20,000</option>
+                            <option value="30000">30,000</option>
+                            <option value="40000">40,000</option>
+                            <option value="mas">Más de 40,000</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="text-center mt-6">
+                    <button type="submit"
+                        class="bg-[#183662] text-white font-semibold rounded-lg px-8 py-3 shadow-md hover:shadow-lg hover:bg-[#163055] transition">
+                        Confirmar Registro
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Toast de confirmación -->
+    <div id="toast"
+        class="fixed bottom-6 right-6 z-50 hidden items-center gap-3 max-w-sm rounded-lg bg-white text-[#183662] shadow-xl px-4 py-3 border border-[#183662]/15"
+        role="alert" aria-live="polite" aria-atomic="true">
+        <svg viewBox="0 0 24 24" class="w-5 h-5 text-green-600" fill="currentColor">
+            <path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2m-1 15-4-4 1.41-1.41L11 13.17l5.59-5.59L18 9z" />
+        </svg>
+        <span id="toastMsg" class="text-sm font-medium">¡Gracias por registrarte!</span>
+    </div>
+
+    <!-- FAQ ESTÁTICO -->
+    <section class="py-16 px-4 bg-[#183662] text-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">Preguntas frecuentes</h2>
+
+            <div class="space-y-4">
+                <!-- Item -->
+                <div class="rounded-xl border border-white/10 bg-white/5 p-5">
+                    <h3 class="font-semibold text-lg mb-2">¿Cuál es el monto mínimo de inversión?</h3>
+                    <p class="text-white/80">Puedes comenzar desde S/ 20,000 y recibir ingresos desde el primer mes.</p>
+                </div>
+
+                <!-- Item -->
+                <div class="rounded-xl border border-white/10 bg-white/5 p-5">
+                    <h3 class="font-semibold text-lg mb-2">¿Cómo están protegidas mis inversiones?</h3>
+                    <p class="text-white/80">Cada inversión está respaldada por garantías hipotecarias reales y un
+                        equipo legal especializado.</p>
+                </div>
+
+                <!-- Item -->
+                <div class="rounded-xl border border-white/10 bg-white/5 p-5">
+                    <h3 class="font-semibold text-lg mb-2">¿Puedo retirar mi inversión antes del plazo?</h3>
+                    <p class="text-white/80">Depende de las condiciones del contrato. Te brindamos transparencia y
+                        alternativas según el caso.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#183662] text-white py-8 px-4 border-t border-white/10">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <div><img src="../img/ICP-EMPRESA-PNG.png" alt="Intercapital Perú" class="h-10 md:h-16"></div>
+            <div class="text-center md:text-right">
+                <div class="flex justify-center md:justify-end gap-4 mt-2">
+                    <a href="https://www.facebook.com/profile.php?id=61576219722457" target="_blank"
+                        aria-label="Facebook" class="text-white/70 hover:text-white transition">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M22 12.07C22 6.48 17.52 2 12 2S2 6.48 2 12.07c0 4.84 3.44 8.85 8 9.8v-6.93H8v-2.87h2V9.93c0-2.07 1.23-3.22 3.12-3.22.9 0 1.84.16 1.84.16v2.02h-1.04c-1.03 0-1.35.64-1.35 1.29v1.55h2.3l-.37 2.87h-1.93v6.93c4.56-.95 8-4.96 8-9.8z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/intercapitalperu/" target="_blank" aria-label="Instagram"
+                        class="text-white/70 hover:text-white transition">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm4.88-.88a1.13 1.13 0 1 1 0 2.25 1.13 1.13 0 0 1 0-2.25z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/intercapital-per%C3%BA/posts/?feedView=all"
+                        target="_blank" aria-label="LinkedIn" class="text-white/70 hover:text-white transition">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8.25h4V24h-4V8.25zm7.5 0h3.84v2.13h.06c.53-1 1.84-2.13 3.8-2.13 4.06 0 4.81 2.66 4.81 6.11V24h-4v-7.54c0-1.8-.03-4.13-2.52-4.13-2.52 0-2.91 1.97-2.91 4V24h-4V8.25z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-6">
+            <p class="text-center text-xs text-white/70">
+                Desarrollado con ❤️ por
+                <a href="https://minddevperu.com/" target="_blank"
+                    class="underline hover:text-white transition">Minddev</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Envío con fetch a Getform + toast
+        (function () {
+            const form = document.getElementById('registroForm');
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+
+            function showToast(message = '¡Gracias por registrarte!', ms = 3500) {
+                toastMsg.textContent = message;
+                toast.classList.remove('hidden');
+                toast.classList.add('flex');
+                setTimeout(() => {
+                    toast.classList.add('hidden');
+                    toast.classList.remove('flex');
+                }, ms);
+            }
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const fd = new FormData(form);
+                try {
+                    const res = await fetch(form.action, { method: 'POST', body: fd, headers: { 'Accept': 'application/json' } });
+                    if (res.ok) { form.reset(); showToast('¡Gracias por registrarte! Nos vemos pronto.'); }
+                    else { showToast('Ocurrió un problema. Inténtalo nuevamente.', 4000); }
+                } catch (_) { showToast('Sin conexión. Inténtalo nuevamente.', 4000); }
+            });
+        })();
+    </script>
+</body>
+
+</html>
