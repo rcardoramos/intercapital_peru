@@ -43,232 +43,407 @@
 
 <body class="font-sans bg-gray-50 scroll-smooth">
   <!-- Header -->
-  <header id="header" class="gradient-bg text-white">
-    <div class="container mx-auto px-4 py-6">
-      <div class="flex justify-between items-center">
-        <div class="flex items-center">
-          <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mr-2" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-          </svg> -->
-          <img src="./img/Logo ICP Blanco.png" alt="Logo Intercapital" class="w-36">
-          <!-- <span class="text-xl font-bold">Intercapital</span> -->
-        </div>
-        <div class="hidden md:flex items-center space-x-6">
-          <a href="#beneficios" class="hover:text-sky-200">Beneficios</a>
-          <a href="#como-funciona" class="hover:text-blue-200">Proceso</a>
-          <a href="./inversionista/inversionista.html" class="hover:text-sky-200">Invierte con Nosotros</a>
-          <a href="./trabaja-con-nosotros/trabaja-con-nosotros.html" class="hover:text-blue-200">Careers</a>
-          <a href="#contacto"
-            class="bg-sky-400 text-blue-900 px-4 py-2 font-bold rounded-full hover:bg-sky-200 transition">Cotiza
-            Ahora</a>
-        </div>
-        <button class="md:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+  <header id="header"
+    class="fixed top-0 left-0 w-full z-50 bg-[#0A2342]/80 backdrop-blur-md text-white shadow-md transition">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+
+      <!-- Logo -->
+      <div class="flex items-center">
+        <img src="./img/Logo ICP Blanco.png" alt="Logo Intercapital" class="w-36">
       </div>
+
+      <!-- Menú Desktop -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+        <a href="#beneficios" class="relative hover:text-sky-200 group">
+          Beneficios
+          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-sky-300 transition-all group-hover:w-full"></span>
+        </a>
+        <a href="#como-funciona" class="relative hover:text-blue-200 group">
+          Proceso
+          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-300 transition-all group-hover:w-full"></span>
+        </a>
+        <a href="./inversionista/inversionista.html" class="relative hover:text-sky-200 group">
+          Invierte con Nosotros
+          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-sky-300 transition-all group-hover:w-full"></span>
+        </a>
+        <a href="./trabaja-con-nosotros/trabaja-con-nosotros.html" class="relative hover:text-blue-200 group">
+          Careers
+          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-300 transition-all group-hover:w-full"></span>
+        </a>
+        <a href="#contacto"
+          class="px-5 py-2 rounded-full font-bold bg-gradient-to-r from-sky-400 to-sky-300 text-blue-900 shadow-md hover:shadow-sky-300/40 hover:scale-105 transition">
+          Cotiza Ahora
+        </a>
+      </nav>
+
+      <!-- Menú Mobile -->
+      <button id="menuToggle" class="md:hidden focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Panel Mobile -->
+    <div id="mobileMenu" class="hidden md:hidden bg-[#0A2342] text-white px-6 py-4 space-y-4">
+      <a href="#beneficios" class="block hover:text-sky-200">Beneficios</a>
+      <a href="#como-funciona" class="block hover:text-blue-200">Proceso</a>
+      <a href="./inversionista/inversionista.html" class="block hover:text-sky-200">Invierte con Nosotros</a>
+      <a href="./trabaja-con-nosotros/trabaja-con-nosotros.html" class="block hover:text-blue-200">Careers</a>
+      <a href="#contacto"
+        class="block text-center px-5 py-2 rounded-full font-bold bg-sky-400 text-blue-900 hover:bg-sky-200 transition">
+        Cotiza Ahora
+      </a>
     </div>
   </header>
 
   <!-- SECCIÓN HERO - Video introducción -  -->
 
-  <section id="inicio" class="gradient-bg text-white py-16 md:py-24">
-    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
-      <div class="md:w-1/2 mb-10 md:mb-0">
-        <h1 class="text-4xl md:text-5xl font-bold mb-6">Préstamos Hipotecarios <span class="text-sky-300">Rápidos y
-            Seguros</span></h1>
-        <p class="text-xl mb-8">Otorgamos préstamos con garantía hipotecaria, adaptados al estado real de tu propiedad.
-          Evaluamos tu inmueble en tan solo <span class="text-sky-200">2 horas</span> para ofrecerte una
-          solución
-          rápida,
-          clara y justa."</p>
-        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+  <section id="inicio" class="gradient-bg text-white pt-32 pb-20 md:pt-40 md:pb-28">
+    <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <!-- Texto -->
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
+          Préstamos Hipotecarios <span class="text-sky-300">Rápidos y Seguros</span>
+        </h1>
+        <p class="text-lg md:text-xl text-white/90 mb-8 max-w-lg">
+          Otorgamos préstamos con garantía hipotecaria, adaptados al estado real de tu propiedad.
+          Evaluamos tu inmueble en tan solo <span class="text-sky-200 font-semibold">2 horas</span>
+          para ofrecerte una solución rápida, clara y justa.
+        </p>
+
+        <div class="flex flex-wrap gap-4">
           <a href="#contacto"
-            class="bg-sky-400 text-blue-900 px-8 py-4 text-lg font-bold rounded-full hover:bg-sky-200 transition text-center pulse-animation">Solicitar
-            Ahora</a>
+            class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-full bg-gradient-to-r from-sky-400 to-sky-300 text-blue-900 shadow-lg hover:scale-105 transition">
+            🚀 Solicitar Ahora
+          </a>
           <a href="#beneficios"
-            class="border-2 border-white text-white px-8 py-4 text-lg font-bold rounded-full hover:bg-white hover:text-blue-900 transition text-center">Conoce
-            Más</a>
+            class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-full border-2 border-white/40 text-white hover:bg-white hover:text-blue-900 transition">
+            Conoce Más
+          </a>
+        </div>
+
+        <!-- Prueba social -->
+        <div class="mt-8 flex gap-8 text-white/80">
+          <div>
+            <p class="text-3xl font-bold text-white">+500</p>
+            <p class="text-sm">Préstamos otorgados</p>
+          </div>
+          <div class="h-10 w-px bg-white/20"></div>
+          <div>
+            <p class="text-3xl font-bold text-white">+5 años</p>
+            <p class="text-sm">de experiencia</p>
+          </div>
         </div>
       </div>
-      <div class="md:w-1/2 w-full max-w-md mx-auto">
-        <video controls class="w-full rounded-xl shadow-md">
-          <source src="./videos/VIDEO_DEA_ICP_WEB FINAL.mp4" type="video/mp4">
-          Tu navegador no soporta videos HTML5.
-        </video>
+
+      <!-- Video -->
+      <div class="relative">
+        <div class="p-[3px] rounded-2xl bg-gradient-to-br from-sky-300/30 via-white/10 to-transparent">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10">
+            <div class="aspect-[16/9] bg-black">
+              <video controls class="w-full h-full object-contain bg-black">
+                <source src="./videos/VIDEO_DEA_ICP_WEB FINAL.mp4" type="video/mp4">
+                Tu navegador no soporta videos HTML5.
+              </video>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-4">
+              <p class="text-sm text-white/90">Conoce cómo ayudamos a transformar tus proyectos en realidad.</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <!-- <div class="md:w-1/2 flex justify-center">
-        <img src="./img/principal.jpg" alt="Préstamos Hipotecarios" class=" rounded-lg shadow-xl max-w-full h-auto">
-      </div> -->
     </div>
   </section>
 
   <!-- SECCIÓN DE TESTIMONIOS -->
 
-  <section id="testimonios" class="py-16 bg-gray-50">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-4 text-blue-900">Testimonios Reales</h2>
-      <p class="text-xl text-center mb-12 text-gray-600 max-w-3xl mx-auto">
+  <section id="testimonios" class="relative py-20 bg-gradient-to-b from-slate-50 to-white">
+    <!-- decor -->
+    <div class="pointer-events-none absolute -top-24 -left-24 w-72 h-72 rounded-full bg-sky-300/10 blur-3xl"></div>
+    <div class="pointer-events-none absolute -bottom-24 -right-24 w-80 h-80 rounded-full bg-blue-500/10 blur-3xl"></div>
+
+    <div class="container mx-auto px-6 relative z-10">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-center text-blue-900 tracking-tight">
+        Testimonios Reales
+      </h2>
+      <p class="text-lg md:text-xl text-center text-slate-600 max-w-3xl mx-auto mt-3">
         Escucha y lee lo que nuestros clientes dicen sobre su experiencia con nosotros.
       </p>
 
-      <!-- Testimonios en video -->
-      <div class="grid md:grid-cols-3 gap-8 mb-16">
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1">
-          <div class="aspect-w-16 aspect-h-9">
-            <video controls class="w-full h-64 object-cover rounded-xl">
-              <source src="./videos/Testimonio1_Flavio.mp4" type="video/mp4">
-              Tu navegador no soporta el video.
-            </video>
-          </div>
-          <p class="mt-4 text-center text-blue-900 font-semibold">Flavio</p>
-        </div>
+      <!-- VIDEOS -->
+      <div class="grid md:grid-cols-3 gap-8 mt-14">
+        <!-- Card -->
+        <article
+          class="group rounded-2xl p-[3px] bg-gradient-to-br from-sky-300/50 via-white to-transparent shadow-sm hover:shadow-xl transition">
+          <div class="rounded-2xl bg-white p-5">
+            <div class="relative aspect-video rounded-xl overflow-hidden ring-1 ring-slate-200">
+              <video class="peer w-full h-full object-contain bg-black" preload="metadata" controls
+                aria-label="Testimonio de Flavio">
+                <source src="./videos/Testimonio1_Flavio.mp4" type="video/mp4" />
+              </video>
 
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1">
-          <div class="aspect-w-16 aspect-h-9">
-            <video controls class="w-full h-64 object-cover rounded-xl">
-              <source src="./videos/Testimonio2_Cecilia.mp4" type="video/mp4">
-              Tu navegador no soporta el video.
-            </video>
-          </div>
-          <p class="mt-4 text-center text-blue-900 font-semibold">Cecilia</p>
-        </div>
+              <!-- overlay play (opcional si usas controls) -->
+              <button type="button"
+                class="pointer-events-none absolute inset-0 m-auto h-14 w-14 grid place-items-center rounded-full bg-black/40 ring-1 ring-white/30 opacity-0 group-hover:opacity-100 transition"
+                aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="h-7 w-7 text-white">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </button>
 
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1">
-          <div class="aspect-w-16 aspect-h-9">
-            <video controls class="w-full h-64 object-cover rounded-xl">
-              <source src="./videos/Testimonio3_Maribel.mp4" type="video/mp4">
-              Tu navegador no soporta el video.
-            </video>
+              <!-- caption -->
+              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3">
+                <p class="text-sm text-white/90">Cómo simplificamos su proceso de préstamo.</p>
+              </div>
+            </div>
+
+            <div class="mt-4 flex items-center justify-center gap-2">
+              <span
+                class="inline-flex items-center gap-2 rounded-full bg-sky-50 px-3 py-1 text-sky-700 text-sm font-semibold ring-1 ring-sky-200">
+                <span class="h-1.5 w-1.5 rounded-full bg-sky-500"></span> Flavio
+              </span>
+            </div>
           </div>
-          <p class="mt-4 text-center text-blue-900 font-semibold">Maribel</p>
-        </div>
+        </article>
+
+        <!-- Card -->
+        <article
+          class="group rounded-2xl p-[3px] bg-gradient-to-br from-sky-300/50 via-white to-transparent shadow-sm hover:shadow-xl transition">
+          <div class="rounded-2xl bg-white p-5">
+            <div class="relative aspect-video rounded-xl overflow-hidden ring-1 ring-slate-200">
+              <video class="w-full h-full object-contain bg-black" preload="metadata" controls
+                aria-label="Testimonio de Cecilia">
+                <source src="./videos/Testimonio2_Cecilia.mp4" type="video/mp4" />
+              </video>
+              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3">
+                <p class="text-sm text-white/90">Experiencia rápida y clara desde el día uno.</p>
+              </div>
+            </div>
+            <div class="mt-4 flex items-center justify-center">
+              <span
+                class="inline-flex items-center gap-2 rounded-full bg-sky-50 px-3 py-1 text-sky-700 text-sm font-semibold ring-1 ring-sky-200">
+                <span class="h-1.5 w-1.5 rounded-full bg-sky-500"></span> Cecilia
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card -->
+        <article
+          class="group rounded-2xl p-[3px] bg-gradient-to-br from-sky-300/50 via-white to-transparent shadow-sm hover:shadow-xl transition">
+          <div class="rounded-2xl bg-white p-5">
+            <div class="relative aspect-video rounded-xl overflow-hidden ring-1 ring-slate-200">
+              <video class="w-full h-full object-contain bg-black" preload="metadata" controls
+                aria-label="Testimonio de Maribel">
+                <source src="./videos/Testimonio3_Maribel.mp4" type="video/mp4" />
+              </video>
+              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3">
+                <p class="text-sm text-white/90">Transparencia y acompañamiento en cada etapa.</p>
+              </div>
+            </div>
+            <div class="mt-4 flex items-center justify-center">
+              <span
+                class="inline-flex items-center gap-2 rounded-full bg-sky-50 px-3 py-1 text-sky-700 text-sm font-semibold ring-1 ring-sky-200">
+                <span class="h-1.5 w-1.5 rounded-full bg-sky-500"></span> Maribel
+              </span>
+            </div>
+          </div>
+        </article>
       </div>
 
-      <!-- Testimonios escritos -->
+      <!-- TESTIMONIOS ESCRITOS (opcional) -->
+      <div class="grid md:grid-cols-3 gap-6 mt-12">
+        <figure class="rounded-2xl bg-blue-50 p-6 ring-1 ring-blue-100 shadow-sm hover:shadow-md transition">
+          <div class="flex gap-1 mb-3" aria-hidden="true">
+            <span class="i">⭐</span><span class="i">⭐</span><span class="i">⭐</span><span class="i">⭐</span><span
+              class="i">⭐</span>
+          </div>
+          <blockquote class="text-slate-700 italic">“Me aprobaron el crédito en menos de 48 horas. Proceso claro y
+            profesional.”</blockquote>
+          <figcaption class="mt-4 font-semibold text-blue-900">Karina S.</figcaption>
+        </figure>
 
-      <!-- <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-blue-50 p-6 rounded-xl hover:shadow-lg transition transform hover:-translate-y-1">
-          <p class="text-gray-700 italic mb-4">"Me aprobaron el crédito en menos de 48 horas, el proceso fue claro y muy
-            profesional."</p>
-          <p class="text-blue-900 font-bold">– Karina S.</p>
-        </div>
+        <figure class="rounded-2xl bg-blue-50 p-6 ring-1 ring-blue-100 shadow-sm hover:shadow-md transition">
+          <div class="flex gap-1 mb-3" aria-hidden="true">
+            <span class="i">⭐</span><span class="i">⭐</span><span class="i">⭐</span><span class="i">⭐</span><span
+              class="i">⭐</span>
+          </div>
+          <blockquote class="text-slate-700 italic">“Aun en Infocorp, me dieron una oportunidad real. Gracias ICP.”
+          </blockquote>
+          <figcaption class="mt-4 font-semibold text-blue-900">José T.</figcaption>
+        </figure>
 
-        <div class="bg-blue-50 p-6 rounded-xl hover:shadow-lg transition transform hover:-translate-y-1">
-          <p class="text-gray-700 italic mb-4">"Pensé que estar en Infocorp me cerraría las puertas, pero aquí me dieron
-            una gran oportunidad."</p>
-          <p class="text-blue-900 font-bold">– José T.</p>
-        </div>
+        <figure class="rounded-2xl bg-blue-50 p-6 ring-1 ring-blue-100 shadow-sm hover:shadow-md transition">
+          <div class="flex gap-1 mb-3" aria-hidden="true">
+            <span class="i">⭐</span><span class="i">⭐</span><span class="i">⭐</span><span class="i">⭐</span><span
+              class="i">⭐</span>
+          </div>
+          <blockquote class="text-slate-700 italic">“Excelente atención y tasas accesibles. 100% recomendado.”
+          </blockquote>
+          <figcaption class="mt-4 font-semibold text-blue-900">Milagros F.</figcaption>
+        </figure>
+      </div>
 
-        <div class="bg-blue-50 p-6 rounded-xl hover:shadow-lg transition transform hover:-translate-y-1">
-          <p class="text-gray-700 italic mb-4">"Excelente atención y tasas muy accesibles. Lo recomiendo totalmente."
-          </p>
-          <p class="text-blue-900 font-bold">– Milagros F.</p>
-        </div>
-      </div> -->
-
+      <!-- CTA -->
+      <div class="text-center mt-12">
+        <a href="#contacto"
+          class="inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold bg-gradient-to-r from-sky-400 to-sky-300 text-blue-900 shadow-md hover:shadow-sky-300/40 hover:scale-105 transition">
+          Quiero mi evaluación en 2 horas
+        </a>
+      </div>
     </div>
   </section>
+
 
   <!-- SECCIÓN DE CLIENTES CARRUSEL -->
 
-  <section id="clientes" class="py-16 bg-white">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-4 text-blue-900">Nuestros Clientes</h2>
-      <p class="text-xl text-center mb-12 text-gray-600 max-w-3xl mx-auto">
-        Más de 1,600 emprendedores ya confiaron en nosotros y obtuvieron resultados con garantía. Aquí te presentamos a
-        algunos de nuestros clientes satisfechos:
+  <section id="clientes" class="relative py-20 bg-gradient-to-b from-white to-slate-50">
+    <!-- decor -->
+    <div class="pointer-events-none absolute -top-20 -left-24 w-72 h-72 rounded-full bg-sky-300/10 blur-3xl"></div>
+    <div class="pointer-events-none absolute -bottom-24 -right-24 w-80 h-80 rounded-full bg-blue-500/10 blur-3xl"></div>
+
+    <div class="container mx-auto px-6 relative z-10">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-center text-blue-900 tracking-tight">
+        Nuestros Clientes
+      </h2>
+      <p class="text-lg md:text-xl text-center text-slate-600 max-w-3xl mx-auto mt-3">
+        Más de 1,600 emprendedores ya confiaron en nosotros. Conoce algunos de nuestros casos.
       </p>
 
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./img/cliente1.webp" alt="Cliente 1 feliz" class="rounded-xl shadow w-full h-64 object-cover" />
+      <div class="mt-12">
+        <div class="swiper" aria-roledescription="carousel" aria-label="Galería de clientes satisfechos">
+          <div class="swiper-wrapper">
+
+            <!-- Slide -->
+            <div class="swiper-slide">
+              <figure
+                class="group rounded-2xl p-[3px] bg-gradient-to-br from-sky-300/50 via-white to-transparent shadow-sm hover:shadow-xl transition">
+                <div class="rounded-2xl overflow-hidden ring-1 ring-slate-200">
+                  <img src="./img/cliente1.webp" loading="lazy" alt="Cliente satisfecho 1"
+                    class="w-full h-64 md:h-72 object-cover" />
+                </div>
+              </figure>
+            </div>
+
+            <div class="swiper-slide">
+              <figure
+                class="group rounded-2xl p-[3px] bg-gradient-to-br from-sky-300/50 via-white to-transparent shadow-sm hover:shadow-xl transition">
+                <div class="rounded-2xl overflow-hidden ring-1 ring-slate-200">
+                  <img src="./img/cliente2.webp" loading="lazy" alt="Cliente satisfecho 2"
+                    class="w-full h-64 md:h-72 object-cover" />
+                </div>
+              </figure>
+            </div>
+
+            <div class="swiper-slide">
+              <figure
+                class="group rounded-2xl p-[3px] bg-gradient-to-br from-sky-300/50 via-white to-transparent shadow-sm hover:shadow-xl transition">
+                <div class="rounded-2xl overflow-hidden ring-1 ring-slate-200">
+                  <img src="./img/cliente3.webp" loading="lazy" alt="Cliente satisfecho 3"
+                    class="w-full h-64 md:h-72 object-cover" />
+                </div>
+              </figure>
+            </div>
+
+            <div class="swiper-slide">
+              <figure
+                class="group rounded-2xl p-[3px] bg-gradient-to-br from-sky-300/50 via-white to-transparent shadow-sm hover:shadow-xl transition">
+                <div class="rounded-2xl overflow-hidden ring-1 ring-slate-200">
+                  <img src="./img/cliente4.webp" loading="lazy" alt="Cliente satisfecho 4"
+                    class="w-full h-64 md:h-72 object-cover" />
+                </div>
+              </figure>
+            </div>
+
+            <!-- Más slides si quieres -->
           </div>
-          <div class="swiper-slide">
-            <img src="./img/cliente2.webp" alt="Cliente 2 feliz" class="rounded-xl shadow w-full h-64 object-cover" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./img/cliente3.webp" alt="Cliente 3 feliz" class="rounded-xl shadow w-full h-64 object-cover" />
-          </div>
-          <div class="swiper-slide">
-            <img src="./img/cliente4.webp" alt="Cliente 3 feliz" class="rounded-xl shadow w-full h-64 object-cover" />
-          </div>
-          <!-- <div class="swiper-slide">
-            <img src="./img/cliente5_junio.png" alt="Cliente 3 feliz"
-              class="rounded-xl shadow w-full h-64 object-cover" />
-          </div> -->
         </div>
       </div>
     </div>
   </section>
-
 
   <!-- SECCIÓN DE BENEFICIOS -->
-  <section id="beneficios" class="py-16 bg-white">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-4 text-blue-900">Beneficios Exclusivos</h2>
-      <p class="text-xl text-center mb-12 text-gray-600 max-w-3xl mx-auto">Diseñamos soluciones hipotecarias
-        adaptadas a tus necesidades financieras.</p>
+  <section id="beneficios" class="py-20 bg-blue-50 relative">
+    <div class="container mx-auto px-6 relative z-10">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-center text-blue-900 tracking-tight">
+        Beneficios Exclusivos
+      </h2>
+      <p class="text-lg md:text-xl text-center text-slate-700 max-w-3xl mx-auto mt-3">
+        Diseñamos soluciones hipotecarias adaptadas a tus necesidades financieras.
+      </p>
 
-      <div class="grid md:grid-cols-2 gap-8 ">
-        <div class="bg-blue-50 p-8 rounded-xl hover:shadow-lg transition transform hover:-translate-y-1">
-          <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 ">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+      <!-- Grid fijo 2x2 -->
+      <div class="mt-12 grid gap-8 md:grid-cols-2">
+        <!-- Card -->
+        <article
+          class="group rounded-2xl bg-white p-8 shadow-md hover:shadow-xl hover:-translate-y-1 transition border border-blue-100">
+          <div
+            class="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 text-blue-600 shadow">
+            <!-- trending up -->
+            <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
             </svg>
           </div>
-          <h3 class="text-xl font-bold mb-3 text-blue-900">Tasas Competitivas</h3>
-          <p class="text-gray-600">Otorgamos préstamos con tasas desde solo 1.8% mensual, una de las más bajas del
-            mercado. (Sujeto a evaluación previa)</p>
-        </div>
+          <h3 class="text-xl font-bold text-blue-900">Tasas Competitivas</h3>
+          <p class="mt-2 text-slate-600">
+            Tasas desde <span class="font-semibold">1.8% mensual</span> (sujeto a evaluación previa).
+          </p>
+        </article>
 
-        <div class="bg-blue-50 p-8 rounded-xl hover:shadow-lg transition transform hover:-translate-y-1">
-          <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <!-- Card -->
+        <article
+          class="group rounded-2xl bg-white p-8 shadow-md hover:shadow-xl hover:-translate-y-1 transition border border-blue-100">
+          <div
+            class="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 text-blue-600 shadow">
+            <!-- reloj -->
+            <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
-          <h3 class="text-xl font-bold mb-3 text-blue-900">Desembolso Rápido</h3>
-          <p class="text-gray-600">¡Desembolso rápido garantizado! Recibe tu dinero en un plazo máximo de 5 días hábiles
-            después de la aprobación del crédito.</p>
-        </div>
+          <h3 class="text-xl font-bold text-blue-900">Desembolso Rápido</h3>
+          <p class="mt-2 text-slate-600">
+            Recibe tu dinero en <span class="font-semibold">hasta 5 días hábiles</span> después de la aprobación.
+          </p>
+        </article>
 
-        <div class="bg-blue-50 p-8 rounded-xl hover:shadow-lg transition transform hover:-translate-y-1">
-          <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        <!-- Card -->
+        <article
+          class="group rounded-2xl bg-white p-8 shadow-md hover:shadow-xl hover:-translate-y-1 transition border border-blue-100">
+          <div
+            class="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 text-blue-600 shadow">
+            <!-- shield check -->
+            <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
                 d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
             </svg>
           </div>
-          <h3 class="text-xl font-bold mb-3 text-blue-900">¿Estás en Infocorp? ¡No importa!</h3>
-          <p class="text-gray-600">Tu historial no es un problema, te damos una nueva oportunidad con tasas justas y
-            desembolso rápido.</p>
-        </div>
+          <h3 class="text-xl font-bold text-blue-900">¿Estás en Infocorp? ¡No importa!</h3>
+          <p class="mt-2 text-slate-600">
+            Evaluación justa y oportunidades reales con desembolso ágil.
+          </p>
+        </article>
 
-        <div class="bg-blue-50 p-8 rounded-xl hover:shadow-lg transition transform hover:-translate-y-1">
-          <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-8">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        <!-- Card -->
+        <article
+          class="group rounded-2xl bg-white p-8 shadow-md hover:shadow-xl hover:-translate-y-1 transition border border-blue-100">
+          <div
+            class="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 text-blue-600 shadow">
+            <!-- candado/escudo -->
+            <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
                 d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
             </svg>
           </div>
-          <h3 class="text-xl font-bold mb-3 text-blue-900">Seguridad Garantizada</h3>
-          <p class="text-gray-600">Tus datos están protegidos con los más altos estándares de seguridad y
-            confidencialidad.</p>
-        </div>
+          <h3 class="text-xl font-bold text-blue-900">Seguridad Garantizada</h3>
+          <p class="mt-2 text-slate-600">
+            Protección de datos con estándares de seguridad y confidencialidad.
+          </p>
+        </article>
       </div>
     </div>
   </section>
+
 
   <!-- SECTION "CÓMO FUNCIONA" -->
   <section id="como-funciona" class="py-16 bg-gray-50">
