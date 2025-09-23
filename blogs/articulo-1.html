@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título de tu Artículo - Intercapital Perú</title>
+    <meta name="description" content="Descripción del contenido de tu artículo.">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="shortcut icon" href="./img/LOGO-ICP_32x32_fondo azul.png" type="image/png">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #334155;
+        }
+
+        .article-content h1,
+        .article-content h2,
+        .article-content h3 {
+            font-weight: 800;
+            color: #0c2f55;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.75;
+            color: #4b5563;
+        }
+
+        .article-content a {
+            color: #0ea5e9;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        .btn-cta {
+            background: linear-gradient(to right, #38bdf8, #0ea5e9);
+            color: #0c2f55;
+            padding: 1rem 2.5rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn-cta:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-slate-700">
+
+    <header id="header"
+        class="fixed top-0 left-0 w-full z-50 bg-[#0A2342]/80 backdrop-blur-md text-white shadow-md transition">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="flex items-center" aria-label="Volver a la página de inicio">
+                <img src="./img/Logo ICP Blanco.png" alt="Logo Intercapital" class="w-36">
+                <span class="sr-only">Intercapital</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium" aria-label="Navegación principal">
+                <ul class="flex space-x-8">
+                    <li>
+                        <a href="index.html#contacto"
+                            class="px-2 py-2 rounded-full font-bold bg-gradient-to-r from-sky-400 to-sky-300 text-blue-900 shadow-md hover:shadow-sky-300/40 hover:scale-105 transition">Cotiza
+                            Ahora</a>
+                    </li>
+                </ul>
+            </nav>
+            <button id="menuToggle" class="md:hidden focus:outline-none" aria-controls="mobileMenu"
+                aria-expanded="false" aria-label="Abrir menú de navegación">
+                <svg id="iconMenu" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+        <nav id="mobileMenu" class="hidden md:hidden bg-[#0A2342] text-white px-6 py-4 space-y-4 z-40"
+            aria-label="Navegación móvil">
+            <ul class="space-y-4">
+                <li><a href="index.html#beneficios" class="block hover:text-sky-200">Beneficios</a></li>
+                <li><a href="index.html#como-funciona" class="block hover:text-blue-200">Proceso</a></li>
+                <li><a href="./inversionista/inversionista.html" class="block hover:text-sky-200">Invierte con
+                        Nosotros</a></li>
+                <li><a href="./blog.html" class="block hover:text-sky-200 font-bold">Blog</a></li>
+                <li><a href="./trabaja-con-nosotros/trabaja-con-nosotros.html"
+                        class="block hover:text-blue-200">Careers</a></li>
+                <li>
+                    <a href="index.html#contacto"
+                        class="block text-center px-5 py-2 rounded-full font-bold bg-sky-400 text-blue-900 hover:bg-sky-200 transition">Cotiza
+                        Ahora</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="pt-24 pb-20">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <a href="./blog.html" class="inline-flex items-center mb-6 text-blue-600 hover:text-blue-800 transition">
+                <svg class="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                        d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                        clip-rule="evenodd" />
+                </svg>
+                Volver al blog
+            </a>
+
+            <div class="article-content text-lg">
+
+                <h1 class="text-4xl md:text-5xl font-extrabold text-blue-900 leading-tight mb-6">
+                    Guía completa: ¿Cómo conseguir tu primer préstamo hipotecario en Perú?
+                </h1>
+
+                <div class="flex items-center text-sm text-gray-500 mb-8">
+                    <span>15 de octubre de 2023</span>
+                    <span class="mx-2">|</span>
+                    <span>Por Juan Pérez</span>
+                    <div class="ml-auto flex space-x-2">
+                        <a href="#" class="w-8 h-8 rounded-full bg-slate-600 grid place-items-center text-white"
+                            aria-label="Compartir en Facebook">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h3.5V2H17c-4 0-5.4 3.03-5.4 5.4v2.1h-2.1v4h2.1v9H22v-9h2.5l1-4H22V2h3.5v9h-2.1v4h2.1v9H16.5v-9h-2.5v-4h2.5v4z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-slate-600 grid place-items-center text-white"
+                            aria-label="Compartir en Twitter">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.795-1.574 2.162-2.723-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.57 0-6.47 2.9-6.47 6.47 0 .505.056.995.164 1.465-5.37-2.69-10.13-5.676-13.31-10.05c-.55.945-.87 2.046-.87 3.23 0 2.246 1.144 4.232 2.883 5.397-.738-.024-1.433-.225-2.04-.564v.08c0 3.144 2.235 5.766 5.207 6.365-.544.148-1.115.228-1.706.228-.417 0-.82-.04-1.215-.116.825 2.572 3.213 4.455 6.038 4.508-2.227 1.745-5.04 2.788-8.09 2.788-.525 0-1.042-.03-1.553-.09.914 2.97 3.493 5.008 6.574 5.008 7.886 0 12.213-6.505 12.213-12.213 0-.188-.004-.374-.01-.56z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <img src="../img/articulo1-1.jpg"
+                    alt="Una pareja joven discute planes de financiamiento de una casa con un asesor."
+                    class="w-full rounded-xl shadow-md mb-8">
+
+                <p>
+                    El sueño de la casa propia es una de las metas más importantes en la vida de muchas personas. En
+                    **Intercapital Perú**, entendemos la importancia de este paso y queremos acompañarte en el proceso.
+                    Un **préstamo hipotecario** puede ser la herramienta ideal para lograrlo, y aquí te explicamos cómo
+                    funciona de manera sencilla.
+                </p>
+
+                <h2>¿Qué es un préstamo hipotecario?</h2>
+                <p>
+                    Un préstamo hipotecario es un tipo de crédito en el que se utiliza una propiedad (casa, terreno,
+                    etc.) como garantía. Esto permite obtener un monto de dinero considerable con plazos de pago más
+                    largos y tasas de interés generalmente más bajas que otros tipos de préstamos. Es la forma más común
+                    de financiar la compra de una propiedad o de obtener liquidez para otros proyectos.
+                </p>
+
+                <h3>Pasos clave para conseguir tu préstamo en Perú</h3>
+                <p>
+                    Aunque el proceso puede variar, en Intercapital lo hemos simplificado en 4 pasos claros y rápidos,
+                    similares a los que ya viste en nuestra página principal.
+                </p>
+                <ol class="list-decimal list-inside pl-4 text-slate-600 mb-4">
+                    <li class="mb-2"><strong>Envía tu Solicitud:</strong> Completa nuestro formulario en línea con tus
+                        datos básicos. Es rápido y seguro.</li>
+                    <li class="mb-2"><strong>Avalúo Profesional:</strong> Un experto evaluará tu propiedad para
+                        determinar su valor real. Este paso es crucial para ofrecerte un monto de préstamo justo.</li>
+                    <li class="mb-2"><strong>Aprobación Rápida:</strong> Analizamos tu solicitud y te damos una
+                        respuesta en menos de 24 horas. Nos enfocamos en el valor de tu propiedad, no solo en tu
+                        historial crediticio.</li>
+                    <li class="mb-2"><strong>Desembolso Seguro:</strong> Una vez aprobado, el dinero se deposita en tu
+                        cuenta en un plazo de hasta 72 horas hábiles.</li>
+                </ol>
+
+                <h2>¿Qué pasa si estoy en Infocorp?</h2>
+                <p>
+                    En Intercapital, creemos en las segundas oportunidades. A diferencia de las entidades bancarias
+                    tradicionales, nuestra evaluación se basa principalmente en la solidez de tu propiedad. Si tu
+                    inmueble tiene el valor suficiente, podemos otorgarte el financiamiento que necesitas, incluso si
+                    tienes un historial en **Infocorp**.
+                </p>
+
+                <p>
+                    Si estás listo para dar el siguiente paso y necesitas financiamiento, no dudes en contactarnos.
+                    Estamos aquí para ayudarte a hacer realidad tus proyectos.
+                </p>
+
+                <div class="mt-12 text-center">
+                    <a href="index.html#contacto" class="btn-cta inline-block">
+                        ¡Cotiza tu préstamo hipotecario ahora!
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-[#0A2342] text-white py-12">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="md:col-span-2">
+                <img src="./img/Logo ICP Blanco.png" alt="Logo Intercapital" class="w-48 mb-4">
+                <p class="text-gray-400">Préstamos hipotecarios ágiles y seguros para emprendedores peruanos.</p>
+                <div class="flex space-x-4 mt-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition" aria-label="Síguenos en Facebook">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h3.5V2H17c-4 0-5.4 3.03-5.4 5.4v2.1h-2.1v4h2.1v9H22v-9h2.5l1-4H22V2h3.5v9h-2.1v4h2.1v9H16.5v-9h-2.5v-4h2.5v4z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition" aria-label="Síguenos en Twitter">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.795-1.574 2.162-2.723-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.57 0-6.47 2.9-6.47 6.47 0 .505.056.995.164 1.465-5.37-2.69-10.13-5.676-13.31-10.05c-.55.945-.87 2.046-.87 3.23 0 2.246 1.144 4.232 2.883 5.397-.738-.024-1.433-.225-2.04-.564v.08c0 3.144 2.235 5.766 5.207 6.365-.544.148-1.115.228-1.706.228-.417 0-.82-.04-1.215-.116.825 2.572 3.213 4.455 6.038 4.508-2.227 1.745-5.04 2.788-8.09 2.788-.525 0-1.042-.03-1.553-.09.914 2.97 3.493 5.008 6.574 5.008 7.886 0 12.213-6.505 12.213-12.213 0-.188-.004-.374-.01-.56z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition" aria-label="Síguenos en Instagram">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.58.013 4.85.07c1.17.057 1.98.243 2.68.513.7.27 1.3.69 1.88 1.27.58.58 1 1.18 1.27 1.88.27.7.456 1.51.513 2.68.057 1.27.07 1.646.07 4.85s-.013 3.58-.07 4.85c-.057 1.17-.243 1.98-.513 2.68-.27.7-.69 1.3-1.27 1.88-.58.58-1.18 1-1.88 1.27-.7.27-1.51.456-2.68.513-1.27.057-1.646.07-4.85.07s-3.58-.013-4.85-.07c-1.17-.057-1.98-.243-2.68-.513-.7-.27-1.3-.69-1.88-1.27-.58-.58-1-1.18-1.27-1.88-.27-.7-.456-1.51-.513-2.68-.057-1.27-.07-1.646-.07-4.85s.013-3.58.07-4.85c.057-1.17.243-1.98.513-2.68.27-.7.69-1.3 1.27-1.88.58-.58 1.18-1 1.88-1.27.7-.27 1.51-.456 2.68-.513 1.27-.057 1.646-.07 4.85-.07zM12 2.163c-3.267 0-3.692.013-4.996.07c-1.3.06-2.27.287-3.09.58-.82.29-1.5.766-2.2 1.47-1.46.73-2.07 1.5-2.58 2.22-.5.72-1.2 1.5-1.46 2.4-.26.9-.45 1.7-.5 2.6-.05 1-.07 1.8-.07 2.8s.02 1.8.07 2.8c.05.9.24 1.7.5 2.6.26.9.96 1.7 1.46 2.4.5.72 1.5 1.2 2.22 2.2.82.72 1.72 1.2 2.5 1.47.8.27 1.6.46 2.5.5.9.04 1.7.06 2.8.06s1.8-.02 2.8-.06c.9-.04 1.7-.23 2.6-.5.9-.26 1.7-.96 2.4-1.46.72-.5 1.5-1.2 2.22-2.2.73-.82 1.2-1.72 1.47-2.5.27-.8.46-1.6.5-2.5.04-1 .06-1.8.06-2.8s-.02-1.8-.06-2.8c-.04-.9-.23-1.7-.5-2.6-.26-.9-.96-1.7-1.46-2.4-.72-.5-1.5-1.2-2.22-2.2-.73-.82-1.2-1.72-1.47-2.5-.27-.8-.46-1.6-.5-2.5-.04-1-.06-1.8-.06-2.8z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition" aria-label="Síguenos en LinkedIn">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M22 17.5c0 1.25-.976 2.25-2.25 2.25H4.25c-1.25 0-2.25-.976-2.25-2.25V6.5c0-1.25.976-2.25 2.25-2.25h15.5c1.25 0 2.25.976 2.25 2.25V17.5zm-5.675-2.25h-2.125v-5.25h2.125v5.25zm-2.125-6.25c.5-.125 1-.25 1.5-.25s1 .125 1.5.25v-2.5h-3v2.5z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="md:col-span-1">
+                <h3 class="text-lg font-bold mb-4">Navegación</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="index.html#beneficios" class="hover:text-white transition">Beneficios</a></li>
+                    <li><a href="index.html#como-funciona" class="hover:text-white transition">Proceso</a></li>
+                    <li><a href="./inversionista/inversionista.html" class="hover:text-white transition">Invierte con
+                            Nosotros</a></li>
+                    <li><a href="./blog.html" class="hover:text-white transition">Blog</a></li>
+                    <li><a href="./trabaja-con-nosotros/trabaja-con-nosotros.html"
+                            class="hover:text-white transition">Careers</a></li>
+                </ul>
+            </div>
+            <div class="md:col-span-1">
+                <h3 class="text-lg font-bold mb-4">Contacto</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li>Av. La Encalada 123, Of. 456, Santiago de Surco</li>
+                    <li><a href="tel:+51987654321" class="hover:text-white transition">+51 987 654 321</a></li>
+                    <li><a href="mailto:info@intercapital.pe"
+                            class="hover:text-white transition">info@intercapital.pe</a></li>
+                </ul>
+                <a href="index.html#contacto"
+                    class="mt-6 inline-block px-5 py-2 rounded-full font-bold bg-gradient-to-r from-sky-400 to-sky-300 text-blue-900 shadow-md hover:scale-105 transition">
+                    Cotiza Ahora
+                </a>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 text-center mt-8 text-gray-500 text-sm">
+            <p>&copy; 2023 Intercapital Perú. Todos los derechos reservados. | <a href="./politica-de-privacidad.html"
+                    class="hover:underline">Política de Privacidad</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>
