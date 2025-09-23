@@ -42,14 +42,12 @@
 
 <body class="bg-[#183662]">
 
-    <!-- LOGO CENTRADO (link opcional al sitio) -->
     <a href="../index.html" target="_blank" rel="noopener">
         <div class="w-full flex justify-center py-8 bg-[#183662]">
             <img src="../img/ICP-EMPRESA-PNG.png" alt="Intercapital Perú" class="h-12 md:h-20">
         </div>
     </a>
 
-    <!-- HERO -->
     <section id="inicio" class="min-h-[90vh] bg-[#183662] flex items-center justify-center py-16 px-4 text-center">
         <div class="max-w-4xl mx-auto">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
@@ -61,15 +59,13 @@
                 Únete a nuestra comunidad de inversionistas y descubre cómo transformar tus ahorros en patrimonio.
             </p>
 
-            <!-- Video debajo del H1 -->
             <div class="relative rounded-xl overflow-hidden shadow-lg mb-10 max-w-3xl mx-auto border border-white/10">
-                <video autoplay loop playsinline class="w-full h-full object-cover">
+                <video id="video-inicio" autoplay loop playsinline class="w-full h-full object-cover cursor-pointer">
                     <source src="../inversionista/video/icp-landing.mp4" type="video/mp4">
                     Tu navegador no soporta la reproducción de videos.
                 </video>
             </div>
 
-            <!-- CONTADOR -->
             <div class="mt-7">
                 <a href="#formulario"
                     class="inline-block bg-white text-[#183662] font-semibold rounded-lg px-8 py-3 shadow-md hover:shadow-lg hover:bg-white/90 transition">
@@ -79,7 +75,6 @@
         </div>
     </section>
 
-    <!-- POR QUÉ INVERTIR -->
     <section class="py-16 px-4 bg-[#183662]">
         <div class="max-w-5xl mx-auto text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">¿Por qué invertir con nosotros?</h2>
@@ -119,7 +114,6 @@
         </div>
     </section>
 
-    <!-- FORMULARIO -->
     <section id="formulario" class="py-16 px-4 bg-[#183662]">
         <div class="max-w-3xl mx-auto">
             <div class="text-center mb-10">
@@ -128,7 +122,6 @@
                     por correo.</p>
             </div>
 
-            <!-- Getform -->
             <form id="registroForm" action="https://getform.io/f/awnynnqb" method="POST"
                 class="bg-white rounded-xl p-8 shadow-md text-left">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -187,7 +180,6 @@
         </div>
     </section>
 
-    <!-- Toast de confirmación -->
     <div id="toast"
         class="fixed bottom-6 right-6 z-50 hidden items-center gap-3 max-w-sm rounded-lg bg-white text-[#183662] shadow-xl px-4 py-3 border border-[#183662]/15"
         role="alert" aria-live="polite" aria-atomic="true">
@@ -197,26 +189,22 @@
         <span id="toastMsg" class="text-sm font-medium">¡Gracias por registrarte!</span>
     </div>
 
-    <!-- FAQ ESTÁTICO -->
     <section class="py-16 px-4 bg-[#183662] text-white">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">Preguntas frecuentes</h2>
 
             <div class="space-y-4">
-                <!-- Item -->
                 <div class="rounded-xl border border-white/10 bg-white/5 p-5">
                     <h3 class="font-semibold text-lg mb-2">¿Cuál es el monto mínimo de inversión?</h3>
                     <p class="text-white/80">Puedes comenzar desde S/ 20,000 y recibir ingresos desde el primer mes.</p>
                 </div>
 
-                <!-- Item -->
                 <div class="rounded-xl border border-white/10 bg-white/5 p-5">
                     <h3 class="font-semibold text-lg mb-2">¿Cómo están protegidas mis inversiones?</h3>
                     <p class="text-white/80">Cada inversión está respaldada por garantías hipotecarias reales y un
                         equipo legal especializado.</p>
                 </div>
 
-                <!-- Item -->
                 <div class="rounded-xl border border-white/10 bg-white/5 p-5">
                     <h3 class="font-semibold text-lg mb-2">¿Puedo retirar mi inversión antes del plazo?</h3>
                     <p class="text-white/80">Depende de las condiciones del contrato. Te brindamos transparencia y
@@ -226,7 +214,6 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="bg-[#183662] text-white py-8 px-4 border-t border-white/10">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
             <div><img src="../img/ICP-EMPRESA-PNG.png" alt="Intercapital Perú" class="h-10 md:h-16"></div>
@@ -265,8 +252,20 @@
         </div>
     </footer>
 
+    <a href="https://wa.me/51908942105?text=Hola%20Intercapital%2C%20quisiera%20más%20información" target="_blank"
+        rel="noopener"
+        class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg flex items-center justify-center animate-bounce focus:outline-none focus:ring-4 focus:ring-green-300"
+        aria-label="Chatear por WhatsApp con Intercapital Perú">
+
+        <!-- Ícono WhatsApp -->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-7 h-7" viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path
+                d="M20.52 3.48A11.77 11.77 0 0012 0C5.37 0 0 5.37 0 12a11.94 11.94 0 001.62 6L0 24l6.18-1.62A11.94 11.94 0 0012 24c6.63 0 12-5.37 12-12 0-3.18-1.24-6.18-3.48-8.52zM12 22a9.94 9.94 0 01-5.1-1.4l-.36-.22-3.66.96.98-3.56-.24-.38A9.92 9.92 0 012 12C2 6.48 6.48 2 12 2a9.95 9.95 0 017.07 2.93A9.95 9.95 0 0122 12c0 5.52-4.48 10-10 10zm5.3-7.3c-.29-.15-1.71-.84-1.97-.93s-.46-.15-.66.15-.76.93-.93 1.12c-.17.2-.34.22-.63.07a8.1 8.1 0 01-2.39-1.47 9.2 9.2 0 01-1.7-2.1c-.18-.3 0-.46.14-.61.14-.14.3-.37.44-.56.15-.18.2-.3.3-.49.1-.2.05-.37-.02-.52s-.66-1.59-.91-2.18c-.24-.59-.48-.5-.66-.5h-.56c-.2 0-.52.07-.8.37-.29.3-1.06 1.04-1.06 2.54s1.09 2.94 1.24 3.14c.15.2 2.14 3.27 5.19 4.6.73.31 1.3.5 1.75.64.73.23 1.4.2 1.93.12.59-.09 1.71-.7 1.95-1.37.24-.67.24-1.26.17-1.37-.07-.11-.26-.18-.55-.33z" />
+        </svg>
+    </a>
+
     <script>
-        // Envío con fetch a Getform + toast
         (function () {
             const form = document.getElementById('registroForm');
             const toast = document.getElementById('toast');
@@ -292,6 +291,15 @@
                 } catch (_) { showToast('Sin conexión. Inténtalo nuevamente.', 4000); }
             });
         })();
+
+        const video = document.getElementById("video-inicio");
+        video.addEventListener("click", () => {
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        });
     </script>
 </body>
 
