@@ -40,6 +40,56 @@
         style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer>
     <script
         type="text/javascript"> var s = document.createElement("script"); s.src = "https://scripts.converteai.net/af5a396a-abb5-4309-b471-02022e989a8e/players/68ed33cc05814c747419f1d9/v4/player.js", s.async = !0, document.head.appendChild(s); </script>
+
+    <script>
+        // Nombres simulados
+        const nombres = [
+            "✅ Juan", "✅ Ariana", "✅ Deydre", "✅ Rousse", "✅ Luis", "✅ Josue", "✅ Patricia", "✅ Clara", "✅ Marco", "✅ María", "✅ Carlos", "✅ Lucía", "✅ Pedro", "✅ Ana", "✅ Jorge", "✅ Valeria", "✅ Luis", "✅ Sofía", "✅ Miguel", "✅ Camila", "✅ Diego"
+        ];
+
+        // Contenedor del mensaje
+        const mensaje = document.createElement('div');
+        mensaje.style.position = 'fixed';
+        mensaje.style.bottom = '-60px';
+        mensaje.style.left = '50%';
+        mensaje.style.fontWeight = 'bold',
+            mensaje.style.transform = 'translateX(-50%)';
+        mensaje.style.background = 'rgba(255, 255, 255, 0.9)';
+        mensaje.style.color = '#000';
+        mensaje.style.padding = '12px 20px';
+        mensaje.style.borderRadius = '10px';
+        mensaje.style.boxShadow = '0 4px 10px rgba(0,0,0,0.2)';
+        mensaje.style.fontFamily = 'Arial, sans-serif';
+        mensaje.style.fontSize = '15px';
+        mensaje.style.transition = 'bottom 0.5s ease';
+        document.body.appendChild(mensaje);
+
+        function mostrarMensaje() {
+            const nombre = nombres[Math.floor(Math.random() * nombres.length)];
+            const acciones = [
+                "Vio la Clase.",
+                "Vio la Clase.",
+                "Vio la Clase.",
+                "Vio la Clase.",
+                "Vio la Clase."
+            ];
+            const accion = acciones[Math.floor(Math.random() * acciones.length)];
+
+            mensaje.innerText = `${nombre} ${accion}`;
+            mensaje.style.bottom = '20px';
+
+            // Ocultar después de 5 segundos
+            setTimeout(() => {
+                mensaje.style.bottom = '-60px';
+            }, 4000);
+        }
+
+        // Mostrar un mensaje cada cierto tiempo (por ejemplo, entre 10 y 20 segundos)
+        setInterval(mostrarMensaje, Math.floor(Math.random() * 5000) + 5000);
+    </script>
 </body>
+
+
+
 
 </html>
