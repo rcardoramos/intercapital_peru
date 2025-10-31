@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    lucide.createIcons();
+
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
     const iconMenu = document.getElementById('iconMenu');
@@ -32,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         window.addEventListener('resize', () => {
-            if (window.innerWidth >= 768) { // Coincide con el breakpoint 'md' de Tailwind
+            if (window.innerWidth >= 768) {
                 if (!mobileMenu.classList.contains('hidden')) {
                     mobileMenu.classList.add('hidden');
                     menuToggle.setAttribute('aria-expanded', 'false');
@@ -124,23 +126,20 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // --- Smooth Scroll ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault(); // Previene el comportamiento de salto predeterminado
             const targetId = this.getAttribute('href');
 
-            // Asegúrate de que el ID no sea solo '#'
             if (targetId === '#') return;
 
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
-                // Desplaza la vista al elemento objetivo con un desplazamiento suave
+
                 targetElement.scrollIntoView({
                     behavior: 'smooth'
                 });
 
-                // Si el menú móvil está abierto y se hace clic en un enlace, ciérralo
                 if (!mobileMenu.classList.contains('hidden') && targetId.startsWith('#')) {
                     mobileMenu.classList.add('hidden');
                     menuToggle.setAttribute('aria-expanded', 'false');
@@ -150,9 +149,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-
-    // --- Swiper Carrusel ---
-    // Asegúrate de que la biblioteca Swiper esté cargada antes de este script
     if (typeof Swiper !== 'undefined') {
         new Swiper(".swiper", {
             slidesPerView: 1,
@@ -170,4 +166,21 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         console.warn("Swiper library not found. Please ensure Swiper JS is loaded before main.js");
     }
+});
+
+document.querySelectorAll('.faq-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+
+        // Cierra todos los demás
+        document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+        document.querySelectorAll('.faq-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
+
+        // Abre el actual si estaba cerrado
+        if (!expanded) {
+            btn.setAttribute('aria-expanded', 'true');
+            content.classList.remove('hidden');
+        }
+    });
 });

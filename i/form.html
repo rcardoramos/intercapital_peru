@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario Compacto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f172a, #1e3a8a);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .option-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .3rem;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            color: white;
+            font-size: .95rem;
+            padding: .75rem;
+            border-radius: .5rem;
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+        }
+
+        .option-btn:hover,
+        .option-btn.active {
+            background: rgba(255, 255, 255, 0.35);
+            transform: scale(1.05);
+        }
+
+        .hidden-input {
+            display: none;
+        }
+
+        .modal-bg {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-bg.active {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w-full max-w-3xl bg-white/10 backdrop-blur-lg rounded-2xl p-8 shadow-2xl">
+        <h2 class="text-2xl font-bold mb-4 text-center">✨ Reserva tu asistencia</h2>
+        <p class="text-white/70 text-center mb-6 text-sm">Completa tus datos para agendar tu cita — ¡cupos limitados!
+        </p>
+
+        <form id="registroForm" action="https://getform.io/f/bvrmlowb" method="POST" class="space-y-5">
+            <!-- Datos Personales -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label for="name" class="block text-sm mb-1">👤 Nombre completo</label>
+                    <input id="name" name="name" type="text" required placeholder="Ej. Juan Pérez"
+                        class="w-full px-3 py-2 rounded-lg text-gray-900 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm mb-1">📧 Correo electrónico</label>
+                    <input id="email" name="email" type="email" required placeholder="correo@dominio.com"
+                        class="w-full px-3 py-2 rounded-lg text-gray-900 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label for="phone" class="block text-sm mb-1">📱 Teléfono</label>
+                    <input id="phone" name="phone" type="tel" required placeholder="+51 900 000 000"
+                        class="w-full px-3 py-2 rounded-lg text-gray-900 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+                <div>
+                    <label for="fecha" class="block text-sm mb-1">📅 Fecha de cita</label>
+                    <input type="date" id="fecha" name="fecha" required
+                        class="w-full px-3 py-2 text-gray-900 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                </div>
+            </div>
+
+            <!-- Inversión -->
+            <div>
+                <label class="block text-sm mb-2">💰 ¿Cuánto deseas invertir?</label>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                    <input type="radio" name="monto_invertir" value="20-50k" class="hidden-input" id="opt-20k">
+                    <input type="radio" name="monto_invertir" value="51-100k" class="hidden-input" id="opt-40k">
+                    <input type="radio" name="monto_invertir" value="101-300k" class="hidden-input" id="opt-80k">
+                    <input type="radio" name="monto_invertir" value="300k+" class="hidden-input" id="opt-mas">
+
+                    <div class="option-btn" onclick="selectOption('opt-20k', this)">20k - 50k</div>
+                    <div class="option-btn" onclick="selectOption('opt-40k', this)">51k - 100k</div>
+                    <div class="option-btn" onclick="selectOption('opt-80k', this)">101k - 300k</div>
+                    <div class="option-btn" onclick="selectOption('opt-mas', this)">+300k</div>
+                </div>
+            </div>
+
+            <!-- Horario -->
+            <div>
+                <label class="block text-sm mb-2">🕒 Horario disponible</label>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                    <input type="radio" name="horario" value="10:00 AM" class="hidden-input" id="h-10">
+                    <input type="radio" name="horario" value="12:00 PM" class="hidden-input" id="h-12">
+                    <input type="radio" name="horario" value="3:00 PM" class="hidden-input" id="h-15">
+                    <input type="radio" name="horario" value="5:00 PM" class="hidden-input" id="h-17">
+
+                    <div class="option-btn" onclick="selectOption('h-10', this)">10:00</div>
+                    <div class="option-btn" onclick="selectOption('h-12', this)">12:00</div>
+                    <div class="option-btn" onclick="selectOption('h-15', this)">15:00</div>
+                    <div class="option-btn" onclick="selectOption('h-17', this)">17:00</div>
+                </div>
+            </div>
+
+            <!-- Botón -->
+            <button id="submitBtn" type="submit"
+                class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-lg transition">
+                ✅ Agendar cita
+            </button>
+        </form>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal-bg">
+        <div class="bg-white rounded-lg p-8 text-center max-w-md mx-4 text-gray-800">
+            <h2 class="text-2xl font-bold mb-4">🎉 ¡Cita agendada!</h2>
+            <p class="mb-2">Tu cita ha sido reservada exitosamente.</p>
+            <p class="text-sm text-gray-500">Redirigiendo en <span id="modal-count">3</span> segundos...</p>
+        </div>
+    </div>
+
+    <script>
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('fecha').setAttribute('min', today);
+
+        function selectOption(id, el) {
+            document.getElementById(id).checked = true;
+            // quitar clase activa en todos los botones hermanos
+            const siblings = el.parentNode.querySelectorAll('.option-btn');
+            siblings.forEach(btn => btn.classList.remove('active'));
+            el.classList.add('active');
+        }
+
+        const submitBtn = document.getElementById('submitBtn');
+
+        document.getElementById('registroForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Enviando...';
+
+            const formData = new FormData(this);
+            fetch(this.action, { method: 'POST', body: formData })
+                .then(() => {
+                    document.getElementById('modal').classList.add('active');
+                    let seconds = 3;
+                    const span = document.getElementById('modal-count');
+                    const interval = setInterval(() => {
+                        seconds--;
+                        span.textContent = seconds;
+                        if (seconds <= 0) {
+                            clearInterval(interval);
+                            window.location.href = 'gracias.html';
+                        }
+                    }, 1000);
+                })
+                .catch(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = '✅ Agendar cita';
+                    alert('Ocurrió un error al enviar. Intenta nuevamente.');
+                });
+        });
+    </script>
+</body>
+
+</html>
