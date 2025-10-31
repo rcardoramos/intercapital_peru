@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    lucide.createIcons();
+
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
     const iconMenu = document.getElementById('iconMenu');
